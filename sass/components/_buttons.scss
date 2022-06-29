@@ -1,0 +1,25 @@
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+
+  &__standard {
+    min-width: $button__width;
+    min-height: $button__height;
+    background-color: $accent__main;
+    color: $color__negative;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  &__standard:hover,
+  &__standard:focus {
+    background-color: $button__hover;
+  }
+}

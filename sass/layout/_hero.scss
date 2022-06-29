@@ -1,0 +1,33 @@
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 200px 200px;
+  background-color: $background__secondary;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/herobg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color__negative;
+    width: 696px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,31 @@
+.work {
+  padding-bottom: $padding__common;
+
+  &__grid {
+    display: flex;
+    justify-content: center;
+    margin-left: -30px;
+  }
+
+  &__item {
+    position: relative;
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color: rgba(47, 48, 58, 0.8);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color__negative;
+  }
+}

@@ -1,0 +1,94 @@
+.portfolio {
+  margin-bottom: $margin__common;
+  display: flex;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__button {
+    background: $background__trietary;
+    padding: 6px 22px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  &__button:hover,
+  &__button:focus,
+  &__button.selected {
+    background: $accent__main;
+    color: $color__negative;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+
+  &__card {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  &__window {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__overlay {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    top: 0px;
+    background-color: rgba(33, 150, 243, 0.9);
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.55;
+    color: $color__negative;
+    transform: translatey(101%);
+  }
+
+  &__link:hover &__overlay {
+    transform: translatey(0%);
+  }
+
+  &__text {
+    padding: 20px 24px;
+    border-bottom: 1px solid $portborder_color;
+    border-left: 1px solid $portborder_color;
+    border-right: 1px solid $portborder_color;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.88;
+    color: $text__secondary;
+  }
+}

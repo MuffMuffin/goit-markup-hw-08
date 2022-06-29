@@ -1,0 +1,38 @@
+.socials {
+  display: flex;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $color__negative;
+    background-color: $accent__main;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  &__header {
+    color: $element__color;
+  }
+
+  &__footer {
+    color: $color__negative;
+    background-color: $footsocial_background;
+  }
+}

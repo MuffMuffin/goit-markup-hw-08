@@ -1,0 +1,39 @@
+.clients {
+  &__grid {
+    display: flex;
+    justify-content: center;
+    margin-left: -30px;
+  }
+
+  &__item {
+    display: inherit;
+    flex-basis: calc(100% / 6 - 30px);
+    margin-left: 30px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: $element__color;
+    border: 1px solid $element__color;
+    border-radius: 4px;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent__main;
+    border-color: $accent__main;
+  }
+
+  &__image {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+  }
+}

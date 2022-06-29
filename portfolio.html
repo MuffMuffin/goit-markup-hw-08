@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css"
+      integrity="sha512-Y0MM+V6ymRKN2zStTqzQ227DWhhp4Mzdo6gnlRnuaNCbc+YN/ZH0sBCLTM4M0oSy9c9VKiCvd4Jk44aCLrNS5Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <nav class="navigation">
+          <a href="" class="logo logo--normal" lang="en"
+            ><span class="logo--accent">Web</span><span>Studio</span></a
+          >
+          <ul class="list navigation__grid">
+            <li class="navigation__item">
+              <a
+                href="./index.html"
+                class="link navigation__link hover--accent transition--color"
+                >Студия</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a
+                href="./portfolio.html"
+                class="link navigation__link hover--accent transition--color current"
+                >Портфолио</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a
+                href=""
+                class="link navigation__link hover--accent transition--color"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <ul class="list contacts">
+          <li>
+            <a
+              href="mailto:info@devstudio.com"
+              class="link address contacts__email transition--color"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li>
+            <a
+              href="tel:+380961111111"
+              class="link address contacts__phone transition--color"
+              >+38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 hidden>Projects</h1>
+          <ul class="list portfolio">
+            <li class="portfolio__item">
+              <button
+                type="button"
+                onclick=""
+                class="button portfolio__button selected"
+              >
+                Все
+              </button>
+            </li>
+            <li class="portfolio__item">
+              <button
+                type="button"
+                onclick=""
+                class="button portfolio__button transition--color transition--background transition--shadow"
+              >
+                Веб-сайты
+              </button>
+            </li>
+            <li class="portfolio__item">
+              <button
+                type="button"
+                onclick=""
+                class="button portfolio__button transition--color transition--background transition--shadow"
+              >
+                Приложения
+              </button>
+            </li>
+            <li class="portfolio__item">
+              <button
+                type="button"
+                onclick=""
+                class="button portfolio__button transition--color transition--background transition--shadow"
+              >
+                Дизайн
+              </button>
+            </li>
+            <li class="portfolio__item">
+              <button
+                type="button"
+                onclick=""
+                class="button portfolio__button transition--color transition--background transition--shadow"
+              >
+                Маркетинг
+              </button>
+            </li>
+          </ul>
+          <ul class="list projects">
+            <li class="projects__card">
+              <a href="" class="link projects__link transition--shadow">
+                <div class="projects__window">
+                  <img
+                    src="./images/project1.jpg"
+                    alt="Ноутбук с вебсайтом"
+                    width="370"
+                    height="294"
+                  />
+                  <p class="projects__overlay transition--transform">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+                <div class="projects__text">
+                  <h2 class="projects__title">Технокряк</h2>
+                  <p class="projects__description">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="link projects__link transition--shadow">
+                <div class="projects__window">
+                  <img
+                    src="./images/project2.jpg"
+                    alt="Постер с баскетболистами"
+                    width="370"
+                    height="294"
+                  />
+                  <p class="projects__overlay transition--transform">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Amet voluptatum, magnam cupiditate praesentium sequi
+                    eligendi quae soluta ducimus voluptates provident sunt,
+                    quasi autem illum!
+                  </p>
+                </div>
+                <div class="projects__text">
+                  <h2 class="projects__title">
+                    Постер <span lang="en">Orlean vs Golden Star</span>
+                  </h2>
+                  <p class="projects__description">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="link projects__link transition--shadow">
+                <div class="projects__window">
+                  <img
+                    src="./images/project3.jpg"
+                    alt="Лого ресторана"
+                    width="370"
+                    height="294"
+                  />
+                  <p class="projects__overlay transition--transform">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                    expedita enim commodi nobis illum iste perferendis
+                    accusamus, cupiditate minima cum! Suscipit quod nesciunt qui
+                    aspernatur!
+                  </p>
+                </div>
+                <div class="projects__text">
+                  <h2 class="projects__title">
+                    Ресторан <span lang="en">Seafood</span>
+                  </h2>
+                  <p class="projects__description">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="link projects__link transition--shadow">
+                <div class="projects__window">
+                  <img
+                    src="./images/project4.jpg"
+                    alt="Наушники"
+                    width="370"
+                    height="294"
+                  />
+                  <p class="projects__overlay transition--transform">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quidem officiis asperiores maxime totam quae harum at quis,
+                    id dignissimos quo, ipsam, placeat aperiam nemo?
+                  </p>
+                </div>
+                <div class="projects__text">
+                  <h2 class="projects__title">
+                    Проект <span lang="en">Prime</span>
+                  </h2>
+                  <p class="projects__description">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="link projects__link transition--shadow">
+                <div class="projects__window">
+                  <img
+                    src="./images/project5.jpg"
+                    alt="Коробочки"
+                    width="370"
+                    height="294"
+                  />
+                  <p class="projects__overlay transition--transform">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Veritatis officia aspernatur eveniet perferendis blanditiis
+                    porro debitis necessitatibus temporibus ipsa dolorem
+                    recusandae, voluptatibus nisi.
+                  </p>
+                </div>
+                <div class="projects__text">
+                  <h2 class="projects__title">
+                    Проект <span lang="en">Boxes</span>
+                  </h2>
+                  <p class="projects__description">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="link projects__link transition--shadow">
+                <div class="projects__window">
+                  <img
+                    src="./images/project6.jpg"
+                    alt="Компъютер с вебсайтом"
+                    width="370"
+                    height="294"
+                  />
+                  <p class="projects__overlay transition--transform">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Perspiciatis sint incidunt laborum? Nihil unde dignissimos
+                    rem. Reprehenderit est exercitationem atque voluptas dicta?
+                  </p>
+                </div>
+                <div class="projects__text">
+                  <h2 class="projects__title">
+                    <span lang="en">Inspiration has no Borders</span>
+                  </h2>
+                  <p class="projects__description">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="link projects__link transition--shadow">
+                <div class="projects__window">
+                  <img
+                    src="./images/project7.jpg"
+                    alt="Книга"
+                    width="370"
+                    height="294"
+                  />
+                  <p class="projects__overlay transition--transform">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Odit quasi beatae nostrum dolorem, similique explicabo! Ex,
+                    blanditiis laborum? Aut aspernatur doloremque quis rem.
+                  </p>
+                </div>
+                <div class="projects__text">
+                  <h2 class="projects__title">
+                    Издание <span lang="en">Limited Edition</span>
+                  </h2>
+                  <p class="projects__description">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="link projects__link transition--shadow">
+                <div class="projects__window">
+                  <img
+                    src="./images/project8.jpg"
+                    alt="Бирка"
+                    width="370"
+                    height="294"
+                  />
+                  <p class="projects__overlay transition--transform">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Incidunt nobis laudantium numquam! Illo est repudiandae
+                    ducimus ab nisi sed nihil laborum atque officia magni.
+                  </p>
+                </div>
+                <div class="projects__text">
+                  <h2 class="projects__title">
+                    Проект <span lang="en">LAB</span>
+                  </h2>
+                  <p class="projects__description">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__card">
+              <a href="" class="link projects__link transition--shadow">
+                <div class="projects__window">
+                  <img
+                    src="./images/project9.jpg"
+                    alt="Человек работает на ноутбуке"
+                    width="370"
+                    height="294"
+                  />
+                  <p class="projects__overlay transition--transform">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Cumque consectetur animi veniam ipsum, sit corporis pariatur
+                    repellat reiciendis, eius dolore, exercitationem nemo.
+                  </p>
+                </div>
+                <div class="projects__text">
+                  <h2 class="projects__title">
+                    <span lang="en">Growing Business</span>
+                  </h2>
+                  <p class="projects__description">Приложение</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <a href="" class="logo logo--negative" lang="en"
+            ><span class="logo--accent">Web</span><span>Studio</span></a
+          >
+          <address class="footer-contacts">
+            <ul class="list">
+              <li class="footer-contacts__item">
+                <a
+                  href="https://goo.gl/maps/NxjCrSozj8dK7ix26"
+                  class="link footer-contacts__link contrast hover--accent transition--color"
+                  >г. Киев, пр-т Леси Украинки, 26</a
+                >
+              </li>
+              <li class="footer-contacts__item">
+                <a
+                  href="mailto:info@example.com"
+                  class="link footer-contacts__link hover--accent transition--color"
+                  >info@example.com</a
+                >
+              </li>
+              <li class="footer-contacts__item">
+                <a
+                  href="tel:+380991111111"
+                  class="link footer-contacts__link hover--accent transition--color"
+                  >+38 099 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div>
+          <p class="footer__title">присоединяйтесь</p>
+          <ul class="list socials">
+            <li class="socials__item">
+              <a
+                href=""
+                class="link socials__link socials__footer transition--color transition--background"
+                ><svg class="socials__icon">
+                  <use href="./images/sprite.svg#instagram"></use></svg
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a
+                href=""
+                class="link socials__link socials__footer transition--color transition--background"
+                ><svg class="socials__icon">
+                  <use href="./images/sprite.svg#twitter"></use></svg
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a
+                href=""
+                class="link socials__link socials__footer transition--color transition--background"
+                ><svg class="socials__icon">
+                  <use href="./images/sprite.svg#facebook"></use></svg
+              ></a>
+            </li>
+            <li class="socials__item">
+              <a
+                href=""
+                class="link socials__link socials__footer transition--color transition--background"
+                ><svg class="socials__icon">
+                  <use href="./images/sprite.svg#linkedin"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-subscribe">
+          <p class="footer__title footer-subscribe__title">
+            Подпишитесь на рассылку
+          </p>
+          <form action="javascript:void(0)" class="footer-subscribe__form">
+            <label for="email"></label>
+            <input
+              type="email"
+              name="mail"
+              id="mail"
+              autocomplete="off"
+              class="footer-subscribe__input"
+              placeholder="E-mail"
+              required
+            />
+            <button
+              type="submit"
+              class="button button__standard footer-subscribe__button transition--background"
+            >
+              Подписаться
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+.benefits {
+  display: flex;
+  justify-content: center;
+  margin-left: -30px;
+
+  &__item {
+    flex-basis: calc(100% / 4 - 30px);
+    margin-left: 30px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    width: 270px;
+    margin-bottom: 10px;
+  }
+
+  &__title::before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: $background__trietary;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--antenna::before {
+    background-image: url(../images/antenna.svg);
+  }
+
+  &--clock::before {
+    background-image: url(../images/clock.svg);
+  }
+
+  &--diagram::before {
+    background-image: url(../images/diagram.svg);
+  }
+
+  &--astronaut::before {
+    background-image: url(../images/astronaut.svg);
+  }
+
+  &__description {
+    line-height: 1.71;
+    color: $text__secondary;
+    width: 270px;
+  }
+}
