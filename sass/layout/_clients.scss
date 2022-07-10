@@ -1,17 +1,33 @@
 .clients {
   &__grid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-left: -30px;
+    @media screen and (max-width: $desktop) {
+      margin-bottom: -30px;
+    }
   }
 
   &__item {
     display: inherit;
-    flex-basis: calc(100% / 6 - 30px);
+
     margin-left: 30px;
     height: 92px;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: $desktop) {
+      margin-bottom: 30px;
+    }
+    @media screen and (max-width: $tablet) {
+      flex-basis: calc(100% / 2 - 30px);
+    }
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc(100% / 3 - 30px);
+    }
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc(100% / 6 - 30px);
+    }
   }
 
   &__link {

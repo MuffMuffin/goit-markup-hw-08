@@ -5,23 +5,47 @@ body {
   color: $text__primary;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
+body.is-open {
+  overflow: hidden;
+}
+
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .section {
-  padding-top: $padding__common;
-  padding-bottom: $padding__common;
+  @media screen and (max-width: $desktop) {
+    padding-top: $padding__mobile;
+    padding-bottom: $padding__mobile;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: $padding__common;
+    padding-bottom: $padding__common;
+  }
 
   &__heading {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
     text-align: center;
-    margin-bottom: $margin__common;
+
+    @media screen and (max-width: $desktop) {
+      font-size: 28px;
+      line-height: 1.18;
+      margin-bottom: $margin__mobile;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 36px;
+      line-height: 1.17;
+      margin-bottom: $margin__common;
+    }
   }
 }
 
@@ -35,6 +59,8 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
@@ -44,7 +70,6 @@ body {
 
   &--normal {
     color: $logo__header;
-    margin-right: 93px;
   }
 
   &--negative {

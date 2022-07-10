@@ -21,53 +21,92 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
-  <body>
+  <body data-body>
     <header class="header">
       <div class="container header__container">
         <nav class="navigation">
-          <a href="" class="logo logo--normal" lang="en"
-            ><span class="logo--accent">Web</span><span>Studio</span></a
-          >
-          <ul class="list navigation__grid">
-            <li class="navigation__item">
-              <a
-                href="./index.html"
-                class="link navigation__link hover--accent transition--color"
-                >Студия</a
+          <div class="navigation-mobile__block">
+            <a
+              href=""
+              class="logo logo--normal navigation-mobile__logo transition--opacity"
+              lang="en"
+              data-logo
+              ><span class="logo--accent">Web</span><span>Studio</span></a
+            >
+            <button
+              type="button"
+              class="button navigation-mobile__menu"
+              aria-expanded="false"
+              data-menu-button
+            >
+              <svg
+                width="40px"
+                height="40px"
+                aria-label="Переключатель мобильного меню"
               >
-            </li>
-            <li class="navigation__item">
-              <a
-                href="./portfolio.html"
-                class="link navigation__link hover--accent transition--color current"
-                >Портфолио</a
-              >
-            </li>
-            <li class="navigation__item">
-              <a
-                href=""
-                class="link navigation__link hover--accent transition--color"
-                >Контакты</a
-              >
-            </li>
-          </ul>
+                <use class="icon-close" href="./images/sprite.svg#close"></use>
+                <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="navigation-mobile__content transition--opacity" data-menu>
+            <ul class="list navigation__grid">
+              <li class="navigation__item">
+                <a
+                  href="./index.html"
+                  class="link navigation__link hover--accent transition--color"
+                  >Студия</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a
+                  href="./portfolio.html"
+                  class="link navigation__link hover--accent transition--color current"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a
+                  href=""
+                  class="link navigation__link hover--accent transition--color"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+            <div class="contacts">
+              <ul class="list contacts__list">
+                <li>
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="link address contacts__email transition--color"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="tel:+380961111111"
+                    class="link address contacts__phone transition--color"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+              <ul class="list mobile-socials" lang="en">
+                <li class="mobile-socials__item">
+                  <a href="" class="link">Instagram</a>
+                </li>
+                <li class="mobile-socials__item">
+                  <a href="" class="link">Twitter</a>
+                </li>
+                <li class="mobile-socials__item">
+                  <a href="" class="link">Facebook</a>
+                </li>
+                <li class="mobile-socials__item">
+                  <a href="" class="link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
-        <ul class="list contacts">
-          <li>
-            <a
-              href="mailto:info@devstudio.com"
-              class="link address contacts__email transition--color"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a
-              href="tel:+380961111111"
-              class="link address contacts__phone transition--color"
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
       </div>
     </header>
 
@@ -126,12 +165,39 @@
             <li class="projects__card">
               <a href="" class="link projects__link transition--shadow">
                 <div class="projects__window">
-                  <img
-                    src="./images/project1.jpg"
-                    alt="Ноутбук с вебсайтом"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/project1-370-1x.jpg 1x,
+                        ./images/project1-370-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/project1-354-1x.jpg 1x,
+                        ./images/project1-354-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="
+                        ./images/project1-450-1x.jpg 1x,
+                        ./images/project1-450-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project1-370-1x.jpg"
+                      alt="Ноутбук с вебсайтом"
+                      width="370"
+                      height="294"
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="projects__overlay transition--transform">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -147,12 +213,39 @@
             <li class="projects__card">
               <a href="" class="link projects__link transition--shadow">
                 <div class="projects__window">
-                  <img
-                    src="./images/project2.jpg"
-                    alt="Постер с баскетболистами"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/project2-370-1x.jpg 1x,
+                        ./images/project2-370-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/project2-354-1x.jpg 1x,
+                        ./images/project2-354-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="
+                        ./images/project2-450-1x.jpg 1x,
+                        ./images/project2-450-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project2-370-1x.jpg"
+                      alt="Постер с баскетболистами"
+                      width="370"
+                      height="294"
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="projects__overlay transition--transform">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Amet voluptatum, magnam cupiditate praesentium sequi
@@ -171,12 +264,39 @@
             <li class="projects__card">
               <a href="" class="link projects__link transition--shadow">
                 <div class="projects__window">
-                  <img
-                    src="./images/project3.jpg"
-                    alt="Лого ресторана"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/project3-370-1x.jpg 1x,
+                        ./images/project3-370-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/project3-354-1x.jpg 1x,
+                        ./images/project3-354-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="
+                        ./images/project3-450-1x.jpg 1x,
+                        ./images/project3-450-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project3-370-1x.jpg"
+                      alt="Лого ресторана"
+                      width="370"
+                      height="294"
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="projects__overlay transition--transform">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
                     expedita enim commodi nobis illum iste perferendis
@@ -195,12 +315,39 @@
             <li class="projects__card">
               <a href="" class="link projects__link transition--shadow">
                 <div class="projects__window">
-                  <img
-                    src="./images/project4.jpg"
-                    alt="Наушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/project4-370-1x.jpg 1x,
+                        ./images/project4-370-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/project4-354-1x.jpg 1x,
+                        ./images/project4-354-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="
+                        ./images/project4-450-1x.jpg 1x,
+                        ./images/project4-450-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project4-370-1x.jpg"
+                      alt="Наушники"
+                      width="370"
+                      height="294"
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="projects__overlay transition--transform">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Quidem officiis asperiores maxime totam quae harum at quis,
@@ -218,12 +365,39 @@
             <li class="projects__card">
               <a href="" class="link projects__link transition--shadow">
                 <div class="projects__window">
-                  <img
-                    src="./images/project5.jpg"
-                    alt="Коробочки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/project5-370-1x.jpg 1x,
+                        ./images/project5-370-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/project5-354-1x.jpg 1x,
+                        ./images/project5-354-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="
+                        ./images/project5-450-1x.jpg 1x,
+                        ./images/project5-450-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project5-370-1x.jpg"
+                      alt="Коробочки"
+                      width="370"
+                      height="294"
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="projects__overlay transition--transform">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Veritatis officia aspernatur eveniet perferendis blanditiis
@@ -242,12 +416,39 @@
             <li class="projects__card">
               <a href="" class="link projects__link transition--shadow">
                 <div class="projects__window">
-                  <img
-                    src="./images/project6.jpg"
-                    alt="Компъютер с вебсайтом"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/project6-370-1x.jpg 1x,
+                        ./images/project6-370-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/project6-354-1x.jpg 1x,
+                        ./images/project6-354-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="
+                        ./images/project6-450-1x.jpg 1x,
+                        ./images/project6-450-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project6-370-1x.jpg"
+                      alt="Компъютер с вебсайтом"
+                      width="370"
+                      height="294"
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="projects__overlay transition--transform">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Perspiciatis sint incidunt laborum? Nihil unde dignissimos
@@ -265,12 +466,39 @@
             <li class="projects__card">
               <a href="" class="link projects__link transition--shadow">
                 <div class="projects__window">
-                  <img
-                    src="./images/project7.jpg"
-                    alt="Книга"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/project7-370-1x.jpg 1x,
+                        ./images/project7-370-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/project7-354-1x.jpg 1x,
+                        ./images/project7-354-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="
+                        ./images/project7-450-1x.jpg 1x,
+                        ./images/project7-450-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project7-370-1x.jpg"
+                      alt="Книга"
+                      width="370"
+                      height="294"
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="projects__overlay transition--transform">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Odit quasi beatae nostrum dolorem, similique explicabo! Ex,
@@ -288,12 +516,39 @@
             <li class="projects__card">
               <a href="" class="link projects__link transition--shadow">
                 <div class="projects__window">
-                  <img
-                    src="./images/project8.jpg"
-                    alt="Бирка"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/project8-370-1x.jpg 1x,
+                        ./images/project8-370-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/project8-354-1x.jpg 1x,
+                        ./images/project8-354-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="
+                        ./images/project8-450-1x.jpg 1x,
+                        ./images/project8-450-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project8-370-1x.jpg"
+                      alt="Бирка"
+                      width="370"
+                      height="294"
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="projects__overlay transition--transform">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Incidunt nobis laudantium numquam! Illo est repudiandae
@@ -311,12 +566,39 @@
             <li class="projects__card">
               <a href="" class="link projects__link transition--shadow">
                 <div class="projects__window">
-                  <img
-                    src="./images/project9.jpg"
-                    alt="Человек работает на ноутбуке"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/project9-370-1x.jpg 1x,
+                        ./images/project9-370-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/project9-354-1x.jpg 1x,
+                        ./images/project9-354-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="
+                        ./images/project9-450-1x.jpg 1x,
+                        ./images/project9-450-2x.jpg 2x
+                      "
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/project9-370-1x.jpg"
+                      alt="Человек работает на ноутбуке"
+                      width="370"
+                      height="294"
+                      class="projects__image"
+                    />
+                  </picture>
                   <p class="projects__overlay transition--transform">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Cumque consectetur animi veniam ipsum, sit corporis pariatur
@@ -339,7 +621,7 @@
     <footer class="footer">
       <div class="container footer__grid">
         <div>
-          <a href="" class="logo logo--negative" lang="en"
+          <a href="" class="logo logo--negative footer__logo" lang="en"
             ><span class="logo--accent">Web</span><span>Studio</span></a
           >
           <address class="footer-contacts">
@@ -430,5 +712,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/height-calc.js"></script>
   </body>
 </html>

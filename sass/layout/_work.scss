@@ -1,5 +1,8 @@
 .work {
   padding-bottom: $padding__common;
+  @media screen and (max-width: $desktop) {
+    display: none;
+  }
 
   &__grid {
     display: flex;

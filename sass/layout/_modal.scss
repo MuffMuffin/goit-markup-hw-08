@@ -18,12 +18,18 @@
   align-content: center;
   justify-content: center;
   position: absolute;
-  min-width: 528px;
   padding: 40px;
   background-color: $background__primary;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media screen and (max-width: $desktop) {
+    width: calc(100vw * 0.94);
+    max-width: 450px;
+  }
+  @media screen and (min-width: $desktop) {
+    min-width: 528px;
+  }
 
   .backdrop.is-hidden & {
     scale: 0;
@@ -44,11 +50,13 @@
     fill: currentColor;
   }
 
-  &__close:hover {
+  &__close:hover,
+  &__close:focus {
     color: $accent__main;
   }
 
   &__title {
+    text-align: center;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -133,8 +141,8 @@
   }
 
   &__agreement {
-    width: 425px;
-    margin: 0 auto 30px auto;
+    margin-bottom: 30px;
+    text-align: center;
   }
 
   &__checkbox {
@@ -176,13 +184,22 @@
 
   &__text {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    word-wrap: normal;
+
     color: $text__secondary;
+    @media screen and (max-width: $desktop) {
+      font-size: 12px;
+      line-height: 1.17;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
 
   &__link {
